@@ -1,0 +1,41 @@
+[package]
+name = "goa"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata.docs.rs]
+features = ["dox"]
+
+[dependencies]
+libc = "0.2.122"
+bitflags = "2.0"
+ffi = { package = "goa-sys", path = "../goa-sys", version = "0.0.1" }
+
+[dependencies.gio]
+package = "gio"
+version = "0.18"
+
+[dependencies.gio-sys]
+package = "gio-sys"
+version = "0.18"
+
+[dependencies.glib]
+package = "glib"
+version = "0.18"
+
+[dependencies.glib-sys]
+package = "glib-sys"
+version = "0.18"
+
+[dependencies.gobject-sys]
+package = "gobject-sys"
+version = "0.18"
+
+[features]
+v3_6 = ["ffi/v3_6"]
+v3_8 = ["ffi/v3_8", "v3_6"]
+v3_12 = ["ffi/v3_12", "v3_8"]
+v3_14 = ["ffi/v3_14", "v3_12"]
+v3_16 = ["ffi/v3_16", "v3_14"]
+v3_18 = ["ffi/v3_18", "v3_16"]
+v3_26 = ["ffi/v3_26", "v3_18"]
