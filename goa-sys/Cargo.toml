@@ -30,7 +30,7 @@ version = "3.18"
 version = "3.26"
 
 [package.metadata.docs.rs]
-features = []
+all-features = "true"
 rustc-args = ["--cfg", "docsrs"]
 rustdoc-args = ["--cfg", "docsrs", "--generate-link-to-definition"]
 
