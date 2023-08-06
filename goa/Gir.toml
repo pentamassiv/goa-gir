@@ -12,7 +12,6 @@ single_version_file = true
 generate = [
     "Goa.Client",
     "Goa.Error",
-    "Goa.Object",
     "Goa.ObjectManagerClient",
     "Goa.Manager",
     "Goa.Account",
@@ -37,3 +36,8 @@ generate = [
 ]
 
 manual = ["GLib.Error", "Gio.AsyncReadyCallback", "Gio.Cancellable"]
+
+[[object]]
+name = "Goa.Object"
+status = "generate"
+trait_name = "GoaObjectExt" # Conflicts with glib::ObjectExt

@@ -145,7 +145,7 @@ pub mod traits {
     pub use super::music::MusicExt;
     pub use super::oauth2_based::OAuth2BasedExt;
     pub use super::oauth_based::OAuthBasedExt;
-    pub use super::object::ObjectExt;
+    pub use super::object::GoaObjectExt;
     #[cfg(feature = "v3_6")]
 #[cfg_attr(docsrs, doc(cfg(feature = "v3_6")))]
     pub use super::password_based::PasswordBasedExt;

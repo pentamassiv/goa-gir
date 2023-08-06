@@ -44,7 +44,7 @@ mod sealed {
     impl<T: super::IsA<super::Object>> Sealed for T {}
 }
 
-pub trait ObjectExt: IsA<Object> + sealed::Sealed + 'static {
+pub trait GoaObjectExt: IsA<Object> + sealed::Sealed + 'static {
     #[doc(alias = "goa_object_get_account")]
     #[doc(alias = "get_account")]
     fn account(&self) -> Option<Account> {
@@ -779,7 +779,7 @@ pub trait ObjectExt: IsA<Object> + sealed::Sealed + 'static {
     }
 }
 
-impl<O: IsA<Object>> ObjectExt for O {}
+impl<O: IsA<Object>> GoaObjectExt for O {}
 
 impl fmt::Display for Object {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
