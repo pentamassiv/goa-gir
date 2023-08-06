@@ -1,2 +1,3 @@
 Cargo.lock
 target/*
+goa-sys/target/*
